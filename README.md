@@ -50,5 +50,5 @@ Output `.so` files will be in `dist/<ABI>/`.
 ## Notes
 
 - LWJGL source is pinned to tag `3.3.1` to match the jars bundled with Minecraft 1.19.3.
-- `stubs/` contains `libglfw.so` stub libraries used as link-time dependencies for `liblwjgl_opengl.so`.
+- `stubs/` contains `libglfw.so` stub libraries used as link-time dependencies for `liblwjgl_opengl.so`. You can use the stubs provided in this repo as-is, or replace them with your own `libglfw.so` build (e.g. from [Nebulae](https://github.com/IzumiTonata/Nebulae) or a custom GLFW Android port). The stub only needs to satisfy the linker at build time; the real `libglfw.so` is loaded at runtime.
 - liburing and platform-specific files (Windows, macOS, FreeBSD, UIO) are excluded from the build.
