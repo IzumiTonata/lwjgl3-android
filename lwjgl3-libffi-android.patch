@@ -1,0 +1,109 @@
+diff --git a/modules/lwjgl/core/src/generated/c/org_lwjgl_system_libffi_LibFFI.c b/modules/lwjgl/core/src/generated/c/org_lwjgl_system_libffi_LibFFI.c
+index 304d76dda..25e98d9ac 100644
+--- a/modules/lwjgl/core/src/generated/c/org_lwjgl_system_libffi_LibFFI.c
++++ b/modules/lwjgl/core/src/generated/c/org_lwjgl_system_libffi_LibFFI.c
+@@ -21,22 +21,38 @@ JNIEXPORT jshort JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1TYPE_1DOUBLE(J
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1WIN64(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_WIN64
+     return (jint)FFI_WIN64;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1GNUW64(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_GNUW64
+     return (jint)FFI_GNUW64;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1UNIX64(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_UNIX64
+     return (jint)FFI_UNIX64;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1EFI64(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_EFI64
+     return (jint)FFI_EFI64;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1SYSV(JNIEnv *__env, jclass clazz) {
+@@ -46,37 +62,65 @@ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1SYSV(JNIEnv *__e
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1STDCALL(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_STDCALL
+     return (jint)FFI_STDCALL;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1THISCALL(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_THISCALL
+     return (jint)FFI_THISCALL;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1FASTCALL(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_FASTCALL
+     return (jint)FFI_FASTCALL;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1MS_1CDECL(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_MS_CDECL
+     return (jint)FFI_MS_CDECL;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1PASCAL(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_PASCAL
+     return (jint)FFI_PASCAL;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1REGISTER(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_REGISTER
+     return (jint)FFI_REGISTER;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1VFP(JNIEnv *__env, jclass clazz) {
+     UNUSED_PARAMS(__env, clazz)
++#ifdef FFI_VFP
+     return (jint)FFI_VFP;
++#else
++    return 0;
++#endif
+ }
+ 
+ JNIEXPORT jint JNICALL Java_org_lwjgl_system_libffi_LibFFI_FFI_1FIRST_1ABI(JNIEnv *__env, jclass clazz) {

@@ -1,0 +1,4 @@
+[submodule "lwjgl3"]
+	path = lwjgl3
+	url = https://github.com/LWJGL/lwjgl3.git
+	branch = 3.3.1
